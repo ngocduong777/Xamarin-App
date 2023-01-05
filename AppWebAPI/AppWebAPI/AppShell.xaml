@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppWebAPI.AppShell" FlyoutBehavior="Disabled" 
+       xmlns:danhsach="clr-namespace:AppWebAPI"
+       BackgroundColor="#FAC213" >
+
+
+    <ShellItem Route="login">
+        <ShellContent ContentTemplate="{DataTemplate danhsach:PageDangNhap}"/>
+    </ShellItem>
+
+    <TabBar Route="main" Shell.TabBarTitleColor="#000" Shell.TabBarUnselectedColor="white" >
+        <Tab Title="Danh mục" Icon="cate_icon.png" >
+            <ShellContent 
+                ContentTemplate="{DataTemplate danhsach:PageLoaiHoa}" />
+        </Tab>
+        <Tab Title="Giỏ hàng" Icon="cart_icon.png">
+            <ShellContent 
+                ContentTemplate="{DataTemplate danhsach:Page_GioHang}" />
+        </Tab>
+        <Tab Title="Người dùng" Icon="usericon.png">
+            <ShellContent 
+                ContentTemplate="{DataTemplate danhsach:PageUser}" />
+        </Tab>
+        
+        
+    </TabBar>
+
+
+</Shell>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppWebAPI.PageDonHangCuaBan" Title="Đơn hàng đã mua">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Padding="0" Margin="0">
+                <Frame BackgroundColor="Transparent" HeightRequest="120" HorizontalOptions="FillAndExpand" Padding="0">
+                    <Image Source="donhangdamua_banner.png" Aspect="AspectFill" Margin="0" />
+
+                </Frame>
+            </StackLayout>
+            <ListView x:Name="lstdonhangcuaban" ItemSelected="lstdonhangcuaban_ItemSelected" HasUnevenRows="True" SeparatorColor="red">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                                        
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" FontAttributes="Bold" TextColor="#ff5400" Text="Mã đơn hàng: " HorizontalOptions="End" VerticalOptions="End" FontSize="18" Margin="0,10,0,0" />
+                                    <Label Grid.Row="1" FontAttributes="Bold" TextColor="#ff5400" Text="Ngày đặt: " HorizontalOptions="End" VerticalOptions="Center" FontSize="18" Margin="0,0,0,10"/>
+                                    <Label Text="{Binding SoDH}" TextColor="Black" Grid.Column="1" Grid.Row="0" FontSize="18" HorizontalOptions="StartAndExpand" VerticalOptions="Center" Margin="0,10,0,0"/>
+                                    <Label Text="{Binding Ngay_Mua}" TextColor="Black" Grid.Column="1" Grid.Row="1" FontSize="18" HorizontalOptions="Start" VerticalOptions="Center" Margin="0,0,0,10"/>
+                                </Grid>
+                                
+                            </ViewCell.View>
+                            
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

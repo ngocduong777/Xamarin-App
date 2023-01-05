@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppWebAPI.PageCTDonHang">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Grid>
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="50"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition ></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" FontSize="18" TextColor="Black" FontAttributes="Bold" Text="Mã" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Label Grid.Column="1" FontSize="18" TextColor="Black" FontAttributes="Bold" Text="Tên" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Label Grid.Column="2" FontSize="18" TextColor="Black" FontAttributes="Bold" Text="Số lượng" HorizontalOptions="Center" VerticalOptions="Center"/>
+                <Label Grid.Column="3" FontSize="18" TextColor="Black" FontAttributes="Bold" Text="Giá tiền" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+            <ListView x:Name="lstCTDH">
+                <ListView.ItemTemplate >
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="{Binding Ma_Hoa}" TextColor="Black" FontSize="18" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" HorizontalOptions="Center"/>
+                                    <Label Text="{Binding tenhoa}" TextColor="Black" FontSize="18" Grid.Row="0" Grid.Column="1" HorizontalOptions="CenterAndExpand" VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding So_Luong}"  TextColor="Black" FontSize="18" Grid.Row="0" Grid.Column="2" HorizontalOptions="Center" VerticalTextAlignment="Center"/>
+                                    <Label Text="{Binding Thanh_Tien}" TextColor="Black" FontSize="18" Grid.Row="0" Grid.Column="3" HorizontalOptions="Center" VerticalTextAlignment="Center"/>
+                                </Grid>
+
+
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </StackLayout>
+            <StackLayout>
+
+                <ListView x:Name="lsttongbill">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid>
+                                    <Grid.RowDefinitions >
+                                        <RowDefinition Height="2*"></RowDefinition>
+                                       
+
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Label FontSize="20" TextColor="#ff5400" Grid.Row="0" Grid.Column="0" Text="Tổng cộng: " FontAttributes="Bold" HorizontalOptions="Center"/>
+
+                                    <Label FontSize="20" Grid.Row="0" Grid.Column="1" Text="{Binding TongCong}" TextColor="#ff5400" FontAttributes="Bold" HorizontalOptions="Center"/>
+                                    <!--
+                                    <Label FontSize="20" TextColor="#ff5400" Grid.Row="1" Grid.Column="0" Text="Địa chỉ: " FontAttributes="Bold" HorizontalOptions="Center"/>
+
+                                    <Label FontSize="20" Grid.Row="1" Grid.Column="1" Text="{Binding Dia_Chi_Giao}" TextColor="#ff5400" FontAttributes="Bold" HorizontalOptions="Center"/>
+                                    <Label FontSize="20" TextColor="#ff5400" Grid.Row="2" Grid.Column="0" Text="Lời nhắn: " FontAttributes="Bold" HorizontalOptions="Center"/>
+
+                                    <Label FontSize="20" Grid.Row="2" Grid.Column="1" Text="{Binding Loi_Nhan}" TextColor="#ff5400" FontAttributes="Bold" HorizontalOptions="Center"/>-->
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

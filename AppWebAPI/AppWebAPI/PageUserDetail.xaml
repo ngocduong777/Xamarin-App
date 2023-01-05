@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppWebAPI.PageUserDetail" Title="Thông tin cá nhân">
+    <ContentPage.Content>
+        
+        <StackLayout>
+            <StackLayout Padding="0" Margin="0">
+                <Frame BackgroundColor="Transparent" HeightRequest="120" HorizontalOptions="FillAndExpand" Padding="0">
+                    <Image Source="thongtincanhan_banner.png" Aspect="AspectFill" Margin="0" />
+
+                </Frame>
+            </StackLayout>
+            <Grid>
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+               
+
+                <Label FontSize="20" FontAttributes="Bold" TextColor="#000" x:Name="txttennguoidung" Text="Tên người dùng:" Grid.Row="1" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entrytennguoidung" Grid.Row="1" Grid.Column="1"  TextColor="Black" PlaceholderColor="Black"/>
+
+                <Label FontSize="20" FontAttributes="Bold" TextColor="#000" x:Name="txttendangnhap" Text="Tên đăng nhập:" Grid.Row="2" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                <Entry x:Name="entrytendangnhap" Grid.Row="2" Grid.Column="1" TextColor="Black" PlaceholderColor="Black" IsReadOnly="True"/>
+
+                <Label FontSize="20" FontAttributes="Bold" TextColor="#000" x:Name="txtemail" Text="Email: " Grid.Row="3" Grid.Column="0" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                <Entry x:Name="entryemail" Grid.Row="3" Grid.Column="1" TextColor="Black" PlaceholderColor="Black" IsReadOnly="True"/>
+            </Grid>
+            <Label Text="*Lưu ý: Bạn chỉ có thể thay đổi tên người dùng." FontAttributes="Italic"/>
+            <Button Text="Cập nhật" WidthRequest="350" HorizontalOptions="Center"  
+                    CornerRadius="20" Margin="0,100,0,0" FontAttributes="Bold" 
+                    BackgroundColor="#FF7F3F" TextColor="White" FontSize="19"
+                    x:Name="update_btn" Clicked="update_btn_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

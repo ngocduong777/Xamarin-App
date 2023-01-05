@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppWebAPI.PageHoa">
+  <ContentPage.Content>
+      
+      
+      <StackLayout>
+            <StackLayout Padding="0" Margin="0">
+                <Frame BackgroundColor="Transparent" HeightRequest="125" HorizontalOptions="FillAndExpand" Padding="0">
+                    <Image x:Name="banner_cate" Aspect="AspectFill" Margin="0" />
+
+                </Frame>
+            </StackLayout>
+            <ListView x:Name="lsthoa" HasUnevenRows="True" SeparatorColor="Black">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="4" VerticalOptions="Center" HorizontalOptions="Center" HeightRequest="150" WidthRequest="150" Source="{Binding Hinh}" />
+
+                           
+                                <Label Text="{Binding TenHoa}" TextColor="#000" Grid.Column="1" Grid.Row="0"  HorizontalOptions="Center" VerticalOptions="Start" FontAttributes="Bold" FontSize="22"/>
+                                <Label Text="{Binding GiaBan}" FontAttributes="Bold" TextColor="blue" Grid.Column="1" Grid.Row="1" VerticalOptions="Start" FontSize="20"/>
+                                <Label Text="{Binding MoTa}" FontAttributes="Italic" TextColor="#ff5400" Grid.Column="1" Grid.Row="2" HorizontalOptions="Start" VerticalOptions="Center" FontSize="16"/>
+                                <Button Text="Thêm vào giỏ hàng" FontAttributes="Bold" TextColor="White" x:Name="cmdMuaHang" Clicked="cmdMuaHang_Clicked" Grid.Column="1" Grid.Row="3" HorizontalOptions="StartAndExpand" WidthRequest="180"
+                                        CornerRadius="20" VerticalOptions="Center" HeightRequest="40" BackgroundColor="#000" Margin="0,0,0,12"/>
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+        </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

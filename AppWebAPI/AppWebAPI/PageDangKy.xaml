@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppWebAPI.PageDangKy">
+    <ContentPage.Content>
+
+        <StackLayout Padding="0">
+
+            <Grid>
+                <StackLayout Padding="0" Margin="0">
+                    <Frame BackgroundColor="Transparent" HeightRequest="180" HorizontalOptions="FillAndExpand" Padding="0">
+                        <Image Source="cover_regis.jpg" Aspect="AspectFill" Margin="0" />
+
+                    </Frame>
+                </StackLayout>
+                <StackLayout Margin="15,80,15,0">
+                    <Frame BackgroundColor="AliceBlue" HasShadow="True" HeightRequest="420" HorizontalOptions="FillAndExpand" CornerRadius="20">
+                        <StackLayout>
+                            <StackLayout HorizontalOptions="CenterAndExpand">
+                                <Label Text="ĐĂNG KÝ" FontAttributes="Bold" FontSize="25" TextColor="Black"/>
+                            </StackLayout>
+
+                            <StackLayout Margin="0,15,0,0">
+                                <Frame BackgroundColor="white" Padding="5" Margin="0" BorderColor="Black" CornerRadius="50" HorizontalOptions="FillAndExpand">
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Frame BackgroundColor="AliceBlue" CornerRadius="50" Margin="7" Padding="0" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start" >
+                                            <Image Source="user_icon.jpg" Aspect="AspectFill" Margin="0" />
+                                        </Frame>
+                                        <Entry x:Name="txttennd" Placeholder="Tên người dùng" HorizontalOptions="FillAndExpand" Margin="0,0,15,0"/>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame BackgroundColor="white" Padding="5" Margin="0" BorderColor="Black" CornerRadius="50" HorizontalOptions="FillAndExpand">
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Frame BackgroundColor="AliceBlue" CornerRadius="50" Margin="7" Padding="0" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start" >
+                                            <Image Source="user_icon.jpg" Aspect="AspectFill" Margin="0" />
+                                        </Frame>
+                                        <Entry x:Name="txttendn" Placeholder="Tên đăng nhập" HorizontalOptions="FillAndExpand" Margin="0,0,15,0"/>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame BackgroundColor="white" Padding="5" Margin="0" BorderColor="Black" CornerRadius="50" HorizontalOptions="FillAndExpand">
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Frame BackgroundColor="AliceBlue" CornerRadius="50" Margin="7" Padding="0" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start" >
+                                            <Image Source="user_icon.jpg" Aspect="AspectFill" Margin="0" />
+                                        </Frame>
+                                        <Entry x:Name="txtEmail" Placeholder="Email"  HorizontalOptions="FillAndExpand" Margin="0,0,15,0"/>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame BackgroundColor="white" Padding="5" Margin="0" BorderColor="Black" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Frame BackgroundColor="AliceBlue" CornerRadius="50" Margin="7" Padding="0" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start" >
+                                            <Image Source="key_icon.jpg" Aspect="AspectFill" Margin="0" />
+
+                                        </Frame>
+                                        <Entry x:Name="txtmatkhau" IsPassword="True" Placeholder="Mật khẩu" HorizontalOptions="FillAndExpand" Margin="0,0,15,0"/>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame BackgroundColor="white" Padding="5" Margin="0" BorderColor="Black" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Frame BackgroundColor="AliceBlue" CornerRadius="50" Margin="7" Padding="0" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start" >
+                                            <Image Source="key_icon.jpg" Aspect="AspectFill" Margin="0" />
+
+                                        </Frame>
+                                        <Entry x:Name="txtmatkhaunl" IsPassword="True" Placeholder="Xác nhận mật khẩu" HorizontalOptions="FillAndExpand" Margin="0,0,15,0"/>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+
+                            <StackLayout Orientation="Horizontal">
+
+                            </StackLayout>
+
+                            <Button Margin="0,10,0,0" x:Name="cmddangky" Clicked="cmddangky_Clicked" FontSize="19" Text="Đăng ký" BackgroundColor="#FF7F3F" TextColor="White" FontAttributes="Bold" CornerRadius="20" />
+                            
+                        </StackLayout>
+                    </Frame>
+
+                </StackLayout>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

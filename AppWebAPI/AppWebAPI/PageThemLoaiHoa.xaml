@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppWebAPI.PageThemLoaiHoa">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lstloaihoa" ItemSelected="lstloaihoa_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding TenLoai}" Detail="{Binding MaLoai}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Entry x:Name="txttenloai"/>
+            <Button x:Name="cmdThem" Text="Them Loai Hoa" Clicked="cmdThem_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

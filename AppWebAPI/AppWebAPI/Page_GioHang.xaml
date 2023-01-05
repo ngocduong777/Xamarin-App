@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppWebAPI.Page_GioHang" Title="Giỏ hàng của bạn">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="lstgiohang" HasUnevenRows="True" SeparatorColor="Red">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                    <RowDefinition></RowDefinition>
+                                   
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding Hinh}" Grid.Column="0" Grid.Row="0" Grid.RowSpan="5" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" HeightRequest="150" WidthRequest="150" />
+                                <Label Text="{Binding TenHoa}" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"  
+                       TextColor="Black" VerticalOptions="End" FontAttributes="Bold" FontSize="22"/>
+                                <Label Text="{Binding GiaBan}" Grid.Column="1" Grid.Row="1" VerticalOptions="End" FontSize="20" Grid.ColumnSpan="2"  
+                       TextColor="Blue" FontAttributes="Bold"/>
+                                <Label Text="{Binding MoTa}" Grid.Column="1" Grid.Row="2" VerticalOptions="Center" FontSize="16"
+											FontAttributes="Italic" TextColor="#ff5400" Grid.ColumnSpan="2"  />
+
+                                <Entry Text="{Binding Soluong}" Grid.Column="1" Grid.Row="3" HorizontalOptions="Start" WidthRequest="200" Grid.ColumnSpan="2"  />
+                                <!--
+                                <Button x:Name="cmdCapnhat" Text="Cập Nhật"  Grid.Column="1" Grid.Row="4" Clicked="cmdCapnhat_Clicked" />-->
+                                <Button x:Name="cmdxoa" CornerRadius="20" TextColor="White" FontAttributes="Bold" 
+                                       FontSize="18" BackgroundColor="red" HeightRequest="40" HorizontalOptions="Center" Margin="0,0,0,7" Text="Xóa" VerticalOptions="Center" Grid.Column="2" Grid.Row="4" Clicked="cmdxoa_Clicked"/>
+                               
+
+                            </Grid>
+                            
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+                
+            </ListView>
+            <!--
+             <Editor x:Name="txtdiachigiaohang" Placeholder="Địa chỉ giao hàng" HeightRequest="50"/>
+            <Editor x:Name="txtdiachiloinhan" Placeholder="Lời nhắn" HeightRequest="50"/>-->
+           
+            <Button x:Name="cmdMuahang" Text="Tiếp theo"  CornerRadius="20" TextColor="white" BackgroundColor="Black" FontAttributes="Bold" 
+                    FontSize="20" HorizontalOptions="Center" Margin="0,0,0,10" WidthRequest="250" VerticalOptions="Center" Clicked="cmdMuahang_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
